@@ -1,5 +1,8 @@
 ARG BASEIMAGE=node:10-alpine
 FROM ${BASEIMAGE}
+
+MAINTAINER Yiqiu Jia <yiqiujia@hotmail.com>
+
 RUN apk add --no-cache make gcc g++ python
 ARG version=latest
 WORKDIR /home/theia
@@ -21,13 +24,13 @@ FROM ${BASEIMAGE}
 ARG BUILD_DATE
 ARG VCS_REF
 ARG VERSION
-LABEL mantainer="Eloy Lopez <elswork@gmail.com>" \
+LABEL mantainer="Yiqiu Jia <yiqiujia@hotmail.com>" \
     org.label-schema.build-date=$BUILD_DATE \
     org.label-schema.name="theia" \
     org.label-schema.description="Multiarch theia for amd64 arm32v7 or arm64" \
     org.label-schema.url="https://deft.work/theia" \
     org.label-schema.vcs-ref=$VCS_REF \
-    org.label-schema.vcs-url="https://github.com/DeftWork/theia" \
+    org.label-schema.vcs-url="https://github.com/land007/docker_theia-all" \
     org.label-schema.vendor="Deft Work" \
     org.label-schema.version=$VERSION \
     org.label-schema.schema-version="1.0"
@@ -48,3 +51,5 @@ ENV SHELL /bin/bash
 ENV USE_LOCAL_GIT true
 USER theia
 ENTRYPOINT [ "node", "/home/theia/src-gen/backend/main.js", "/home/project", "--hostname=0.0.0.0" ]
+
+#docker build -t land007/theia:latest .

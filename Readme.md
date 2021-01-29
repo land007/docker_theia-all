@@ -15,14 +15,14 @@ A [Docker](http://docker.com) file to build images for AMD & ARM devices with a 
 
 | Docker Hub | Docker Pulls | Docker Stars | Size/Layers |
 | --- | --- | --- | --- |
-| [theia](https://hub.docker.com/r/elswork/theia "elswork/theia on Docker Hub") | [![](https://img.shields.io/docker/pulls/elswork/theia.svg)](https://hub.docker.com/r/elswork/theia "theia on Docker Hub") | [![](https://img.shields.io/docker/stars/elswork/theia.svg)](https://hub.docker.com/r/elswork/theia "theia on Docker Hub") | [![](https://images.microbadger.com/badges/image/elswork/theia.svg)](https://microbadger.com/images/elswork/theia "theia on microbadger.com") |
+| [theia](https://hub.docker.com/r/land007/theia "land007/theia on Docker Hub") | [![](https://img.shields.io/docker/pulls/land007/theia.svg)](https://hub.docker.com/r/land007/theia "theia on Docker Hub") | [![](https://img.shields.io/docker/stars/land007/theia.svg)](https://hub.docker.com/r/land007/theia "theia on Docker Hub") | [![](https://images.microbadger.com/badges/image/land007/theia.svg)](https://microbadger.com/images/land007/theia "theia on microbadger.com") |
 
 ## Build Instructions
 
 Build for amd64 arm64 or armv7l architecture (thanks to its [Multi-Arch](https://blog.docker.com/2017/11/multi-arch-all-the-things/) base image)
 
 ``` sh
-docker build -t elswork/theia .
+docker build -t land007/theia .
 ```
 
 ## Start Theia IDE
@@ -32,5 +32,5 @@ make start
 ``` 
 Or
 ``` sh
-docker run -d -p 3000:3000 -v "$(pwd):/home/project:cached" elswork/theia
+docker run -d -p 3000:3000 -v "$(pwd):/home/project:cached" land007/theia
 ```

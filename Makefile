@@ -1,5 +1,5 @@
 SNAME ?= theia
-NAME ?= elswork/$(SNAME)
+NAME ?= land007/$(SNAME)
 VER ?= `cat VERSION`
 BASE ?= latest
 BASENAME ?= node:10-alpine
