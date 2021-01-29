@@ -52,4 +52,5 @@ ENV USE_LOCAL_GIT true
 USER theia
 ENTRYPOINT [ "node", "/home/theia/src-gen/backend/main.js", "/home/project", "--hostname=0.0.0.0" ]
 
-#docker build -t land007/theia:latest .
+#docker build -t land007/theia-all:latest .
+#> docker buildx build --platform linux/amd64,linux/arm64/v8,linux/arm/v7 -t land007/theia-all --push .
