@@ -1,4 +1,4 @@
-ARG BASEIMAGE=node:15-alpine
+ARG BASEIMAGE=node:13-alpine
 FROM ${BASEIMAGE}
 
 MAINTAINER Yiqiu Jia <yiqiujia@hotmail.com>
